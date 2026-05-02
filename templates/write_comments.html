@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            textarea{
+                width: 94%;
+                height: 70vh;
+                font-size: 25px;
+                margin-left:3%;
+                margin-right:3%;
+            }
+            .submit_button{
+                background-color: rgb(98, 246, 98);
+                padding: 5px 5px 5px 5px;
+                transition: transform 0.4 ease;
+                font-size: 18px;
+                margin-left: 3%;  
+            }
+            .submit_button:hover{
+                transform: translateY(-4px);
+            }
+            @media (max-width:500px) {
+                textarea{
+                    font-size: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="post_comment">
+            <textarea name="written_comment">Write here...</textarea>
+            <button class="submit_button" type="submit">POST COMMENT</button>
+        </form>
+    </body>
+</html>

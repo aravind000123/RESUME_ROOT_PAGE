@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aravind's ROOT Projects</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            
+            background: linear-gradient(125deg, #ffffff, #e0f7fa, #fce4ec, #f1f8e9);
+            background-size: 400% 400%;
+            animation: smokeMove 12s ease infinite;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        @keyframes smokeMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+        @media (max-width: 500px) {
+            .container {
+                width: 94%;
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+        }
+
+        .container a {
+            width: 100%;
+            padding: 25px;
+            text-align: center;
+            text-decoration: none;
+            
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            
+            color: #333;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 24px;
+            font-weight: 800;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .description {
+            max-height: 0;
+            opacity: 0;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 0;
+            color: #555;
+            transition: all 0.5s ease;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .working_link:hover {
+            background-color: #cdbd18; /* Your original yellow on hover */
+            color: #1f1f51;
+            transform: scale(1);
+            box-shadow: 0 10px 25px rgba(205, 189, 24, 0.4);
+        }
+
+        .working_link:hover .description {
+            max-height: 300px; 
+            width:100%;
+            opacity: 1;
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.5); /* Light box for text */
+            border-radius: 10px;
+            color: #222;
+        }
+
+        .second_link:hover{
+            background-color: #eee;
+            color: #888;
+            transform: translateY(-5px);
+        }
+
+        .working_link {
+            animation: lightPulse 3s infinite;
+        }
+
+        @keyframes lightPulse {
+            0% { box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); }
+            50% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+            100% { box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a class="working_link" href="https://aravind-upi-personal-banking.onrender.com/" target="_blank">
+            🏦 Banking System
+            <span class="description">
+                <strong>Flask-Powered Banking System:</strong><br>
+                Secure user authentication, account creation, and session management.<br>
+                Supports deposit, fund transfer between users, real-time balance tracking, and complete transaction history.<br>
+                All data is securely stored and managed using a database (SQLite).
+            </span>
+        </a>
+        <a class="working_link" href="https://aravind-games-web.onrender.com/" target="_blank">
+            🎮 GAMES WEB
+            <span class="description">
+                <strong>Flask-Powered Hub:</strong><br>
+                Secure login, interactive gaming, and smooth navigation.<br>
+                Includes Tic Tac Toe, Guess the Number, and Matching Pairs!
+            </span>
+        </a>
+
+        <a class="working_link" href="https://aravind-fixed-music-storage.onrender.com/" target="_blank">
+             🎵 MUSIC STORAGE WEB
+            <span class="description">
+                <strong>Music Streaming Web App:</strong><br>
+                Play and explore fixed songs with a clean UI.<br>
+                Includes audio controls, scrolling song library, and a sticky player at the bottom.
+            </span>
+        </a>
+        
+        <a class="second_link" href="#">
+            🏏 CRICKET SCORING (UPCOMING)
+        </a>
+    </div>
+
+</body>
+</html>

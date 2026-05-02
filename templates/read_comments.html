@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div{
+                width:90%;
+                margin-top:15px;
+                background-color: rgba(98, 98, 237, 0.815);
+                color: white;
+                border:1px solid black;
+                border-radius: 5px;
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 30px;
+                padding: 10px 10px 10px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        {% for x in table_comments %}
+            <div>{{x[1]}}</div>
+        {% endfor %}
+    </body>
+
+</html>
